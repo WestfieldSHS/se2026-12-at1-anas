@@ -1,2 +1,5 @@
-database 
+working_documents
+static 
+templates 
+
 
