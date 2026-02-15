@@ -7,13 +7,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <title>Page 2</title>
+    <title>Ghost of Tsushima</title>
   </head>
 
   <body>
     <header class="top-header">
-      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
-
       <nav class="top-nav">
         <ul>
           <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -28,6 +26,7 @@
             name="q"
             placeholder="Search..."
             class="search-bar"
+            autocomplete="off"
           />
         </form>
       </nav>
@@ -37,38 +36,24 @@
       <div class="bd-top-row">
         <div class="bd-poster-box">
           <img
-            src="{{ url_for('static', filename='images/Interstellar.webp') }}"
+            src="{{ url_for('static', filename='images/ghost.jpg') }}"
             class="bd-poster"
-            alt="Interstellar Poster"
+            alt="Ghost of Tsushima Poster"
           />
         </div>
 
         <div class="bd-details">
-          <p><strong>Duration:</strong> 2h 49m</p>
-          <p><strong>Genre:</strong> Sci‑Fi / Adventure / Drama</p>
-          <p><strong>Released:</strong> 2014</p>
-          <p><strong>Cast:</strong> Matthew McConaughey, Anne Hathaway</p>
+          <p><strong>Genre:</strong> Action / Adventure</p>
+          <p><strong>Released:</strong> 2020</p>
+          <p><strong>Developer:</strong> Sucker Punch Productions</p>
         </div>
       </div>
 
       <div class="bd-review">
         <p>⭐⭐⭐⭐⭐</p>
         <p class="review-title">My personal Review:</p>
-        <p class="review-text">
-          <!-- Your review goes here -->
-          Interstellar, for me, was one of the greatest pieces of film I have
-          witnessed. There are many reasons why this movie is so special for me,
-          but the main reason will have to be guilted. The emotions Cooper
-          (Matthew McConaughey) portrayed were phenomenal. It was as if I was in
-          his position yearning for his daughter. "Don't let me leave Murph" is
-          one of the saddest scenes I've seen. Everything about this movie was
-          amazing, from the cinematography to the acting to the CGI. All of it
-          had a huge impact on making this movie special. Interstellar will go
-          down in my top 3.
-        </p>
+        <p class="review-text">Your review goes here.</p>
       </div>
     </main>
-
-    <footer></footer>
   </body>
 </html>

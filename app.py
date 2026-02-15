@@ -18,6 +18,11 @@ def shows():
     return render_template("shows.html")
 
 
+@app.route("/games")
+def games():
+    return render_template("games.html")
+
+
 @app.route("/page1")
 def page1():
     return render_template("page1.html")
@@ -68,9 +73,24 @@ def show5():
     return render_template("show5.html")
 
 
+@app.route("/game1")
+def game1():
+    return render_template("game1.html")
+
+
+@app.route("/game2")
+def game2():
+    return render_template("game2.html")
+
+
+@app.route("/game3")
+def game3():
+    return render_template("game3.html")
+
+
 @app.route("/search")
 def search():
-    query = request.args.get("q", "").strip().lower()
+    query = request.args.get("q", "").lower()
 
     movies = {
         "little women": "/page1",
@@ -80,11 +100,31 @@ def search():
         "interstellar": "/page5",
     }
 
-    if query in movies:
-        return redirect(movies[query])
+    shows = {
+        "game of thrones": "/show3",
+        "trollhunters": "/show2",
+        "avatar the last airbender": "/show4",
+        "gossip girl": "/show5",
+        "smallville": "/show1",
+    }
+    games = {
+        "ghost of tsushima": "/game1",
+        "silent hill 2": "/game2",
+        "firewatch": "/game3",
+    }
 
+    for title, link in games.items():
+        if query in title:
+            return redirect(link)
+
+    # Search movies
     for title, link in movies.items():
-        if query in title.lower():
+        if query in title:
+            return redirect(link)
+
+    # Search shows
+    for title, link in shows.items():
+        if query in title:
             return redirect(link)
 
     return "No results found."

@@ -19,6 +19,7 @@
           <li><a href="{{ url_for('index') }}">Home</a></li>
           <li><a href="{{ url_for('movies') }}">Movies</a></li>
           <li><a href="{{ url_for('shows') }}">Shows</a></li>
+          <li><a href="{{ url_for('games') }}">Games</a></li>
         </ul>
 
         <form action="{{ url_for('search') }}" method="get">
@@ -39,7 +40,7 @@
             src="{{ url_for('static', filename='images/smallville.webp') }}"
             alt="Show 1"
           />
-          <p>Show 1</p>
+          <p>Smallville</p>
         </a>
 
         <a href="/show2">
@@ -47,7 +48,7 @@
             src="{{ url_for('static', filename='images/trollhunters.jpg') }}"
             alt="Show 2"
           />
-          <p>Show 2</p>
+          <p>Trollhunters</p>
         </a>
 
         <a href="/show3">
@@ -55,7 +56,7 @@
             src="{{ url_for('static', filename='images/game.jpg') }}"
             alt="Show 3"
           />
-          <p>Show 3</p>
+          <p>Game Of Thrones</p>
         </a>
 
         <a href="/show4">
@@ -63,7 +64,7 @@
             src="{{ url_for('static', filename='images/avatar.jpg') }}"
             alt="Show 4"
           />
-          <p>Show 4</p>
+          <p>Avatar The Last Airbender</p>
         </a>
 
         <a href="/show5">
@@ -71,7 +72,7 @@
             src="{{ url_for('static', filename='images/gossip.jpg') }}"
             alt="Show 5"
           />
-          <p>Show 5</p>
+          <p>Gossip Girls</p>
         </a>
       </div>
     </main>

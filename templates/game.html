@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Games</title>
+  </head>
+
+  <body>
+    <header class="top-header">
+      <nav class="top-nav">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('movies') }}">Movies</a></li>
+          <li><a href="{{ url_for('shows') }}">Shows</a></li>
+          <li><a href="{{ url_for('games') }}">Games</a></li>
+        </ul>
+
+        <form action="{{ url_for('search') }}" method="get">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search..."
+            class="search-bar"
+            autocomplete="off"
+          />
+        </form>
+      </nav>
+    </header>
+
+    <main class="movie-grid">
+      <a href="{{ url_for('game1') }}" class="movie-card">
+        <img
+          src="{{ url_for('static', filename='images/ghost.jpg') }}"
+          alt="Ghost of Tsushima"
+        />
+        <p>Ghost of Tsushima</p>
+      </a>
+
+      <a href="{{ url_for('game2') }}" class="movie-card">
+        <img
+          src="{{ url_for('static', filename='images/silent.jpg') }}"
+          alt="Silent Hill 2"
+        />
+        <p>Silent Hill 2</p>
+      </a>
+
+      <a href="{{ url_for('game3') }}" class="movie-card">
+        <img
+          src="{{ url_for('static', filename='images/firewatch.jpg') }}"
+          alt="Firewatch"
+        />
+        <p>Firewatch</p>
+      </a>
+    </main>
+  </body>
+</html>
