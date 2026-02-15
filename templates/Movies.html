@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Movies</title>
+  </head>
+
+  <body>
+    <header class="top-header">
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('movies') }}">Movies</a></li>
+          <li><a href="{{ url_for('shows') }}">Shows</a></li>
+        </ul>
+
+        <form action="{{ url_for('search') }}" method="get">
+        <input type="text" name="q" placeholder="Search..." class="search-bar" />
+        </form>
+
+      </nav>
+    </header>
+
+     <div class="movie-icons">
+        <div class="icon">
+          <a href="{{ url_for('page1') }}">
+            <img
+              src="{{ url_for('static', filename='images/littlewomen.webp') }}"
+              alt="Movie 1"
+            />
+          </a>
+          <p>Little Women</p>
+        </div>
+
+        <div class="icon">
+          <a href="{{ url_for('page2') }}">
+            <img
+              src="{{ url_for('static', filename='images/Basketball.jpg') }}"
+              alt="Movie 2"
+            />
+          </a>
+          <p>Basketball Diaries</p>
+        </div>
+
+        <div class="icon">
+          <a href="{{ url_for('page3') }}">
+            <img
+              src="{{ url_for('static', filename='images/five.webp') }}"
+              alt="Movie 3"
+            />
+          </a>
+          <p>Five Feet Apart</p>
+        </div>
+
+        <div class="icon">
+          <a href="{{ url_for('page4') }}">
+            <img
+              src="{{ url_for('static', filename='images/War.webp') }}"
+              alt="Movie 4"
+            />
+          </a>
+          <p>War For The Planet Of The Apes</p>
+        </div>
+
+        <div class="icon">
+          <a href="{{ url_for('page5') }}">
+            <img
+              src="{{ url_for('static', filename='images/Interstellar.webp') }}"
+              alt="Movie 5"
+            />
+          </a>
+          <p>Interstellar</p>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+  </body>
+</html>

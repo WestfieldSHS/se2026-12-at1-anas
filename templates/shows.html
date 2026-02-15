@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Shows</title>
+  </head>
+
+  <body>
+    <header class="top-header">
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
+
+      <nav class="top-nav">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('movies') }}">Movies</a></li>
+          <li><a href="{{ url_for('shows') }}">Shows</a></li>
+        </ul>
+
+        <form action="{{ url_for('search') }}" method="get">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search..."
+            class="search-bar"
+          />
+        </form>
+      </nav>
+    </header>
+
+    <main>
+      <div class="icon-grid">
+        <a href="/show1">
+          <img
+            src="{{ url_for('static', filename='images/Interstellar.webp') }}"
+            alt="Show 1"
+          />
+          <p>Show 1</p>
+        </a>
+
+        <a href="/show2">
+          <img
+            src="{{ url_for('static', filename='images/show2.jpg') }}"
+            alt="Show 2"
+          />
+          <p>Show 2</p>
+        </a>
+
+        <a href="/show3">
+          <img
+            src="{{ url_for('static', filename='images/show3.jpg') }}"
+            alt="Show 3"
+          />
+          <p>Show 3</p>
+        </a>
+
+        <a href="/show4">
+          <img
+            src="{{ url_for('static', filename='images/show4.jpg') }}"
+            alt="Show 4"
+          />
+          <p>Show 4</p>
+        </a>
+
+        <a href="/show5">
+          <img
+            src="{{ url_for('static', filename='images/show5.jpg') }}"
+            alt="Show 5"
+          />
+          <p>Show 5</p>
+        </a>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

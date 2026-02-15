@@ -17,11 +17,18 @@
       <nav class="top-nav">
         <ul>
           <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('index') }}#movies">Movies</a></li>
-          <li><a href="{{ url_for('index') }}#books">Books</a></li>
+          <li><a href="{{ url_for('movies') }}">Movies</a></li>
+          <li><a href="{{ url_for('shows') }}">Shows</a></li>
         </ul>
 
-        <input type="text" placeholder="Search..." class="search-bar" />
+        <form action="{{ url_for('search') }}" method="get">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search..."
+            class="search-bar"
+          />
+        </form>
       </nav>
     </header>
 

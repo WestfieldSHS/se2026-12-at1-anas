@@ -7,13 +7,11 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <title>Page 2</title>
+    <title>Show 1</title>
   </head>
 
   <body>
     <header class="top-header">
-      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
-
       <nav class="top-nav">
         <ul>
           <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -27,6 +25,7 @@
             name="q"
             placeholder="Search..."
             class="search-bar"
+            autocomplete="off"
           />
         </form>
       </nav>
@@ -36,35 +35,24 @@
       <div class="bd-top-row">
         <div class="bd-poster-box">
           <img
-            src="{{ url_for('static', filename='images/War.webp') }}"
+            src="{{ url_for('static', filename='images/show1.jpg') }}"
             class="bd-poster"
-            alt="War for the Planet of the Apes Poster"
+            alt="Show 1 Poster"
           />
         </div>
 
         <div class="bd-details">
-          <p><strong>Duration:</strong> 2h 20m</p>
-          <p><strong>Genre:</strong> Action / Drama / Sci‑Fi</p>
-          <p><strong>Released:</strong> 2017</p>
-          <p><strong>Cast:</strong> Andy Serkis, Woody Harrelson</p>
+          <p><strong>Genre:</strong> …</p>
+          <p><strong>Released:</strong> …</p>
+          <p><strong>Cast:</strong> …</p>
         </div>
       </div>
 
       <div class="bd-review">
         <p>⭐⭐⭐⭐⭐</p>
         <p class="review-title">My personal Review:</p>
-        <p class="review-text">
-          The greatest end to a trilogy, even possibly better than the ending to
-          The Lord of the Rings. The emotions that were conveyed were
-          phenomenally displayed. This movie really showed the impact of
-          discrimination that the apes had to deal with. Wholeheartedly, I
-          believe that any creature with the ability to present emotions must be
-          treated with the same values as humans. Deserves a 5 because of how
-          intense I felt through the movie.
-        </p>
+        <p class="review-text">Write your review here.</p>
       </div>
     </main>
-
-    <footer></footer>
   </body>
 </html>

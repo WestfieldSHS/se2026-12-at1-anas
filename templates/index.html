@@ -15,66 +15,14 @@
       <nav class="top-nav">
         <ul>
           <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="#movies">Movies</a></li>
-          <li><a href="#books">Books</a></li>
+          <li><a href="{{ url_for('movies') }}">Movies</a></li>
+          <li><a href="{{ url_for('shows') }}">Shows</a></li>
         </ul>
 
-        <input type="text" placeholder="Search..." class="search-bar" />
+        <form action="{{ url_for('search') }}" method="get">
+          <input type="text" name="q" placeholder="Search..." class="search-bar" />
+        </form>
       </nav>
-
-      <div class="movie-icons">
-        <div class="icon">
-          <a href="{{ url_for('page1') }}">
-            <img
-              src="{{ url_for('static', filename='images/little-TC.webp') }}"
-              alt="Movie 1"
-            />
-          </a>
-          <p>Movie 1</p>
-        </div>
-
-        <div class="icon">
-          <a href="{{ url_for('page2') }}">
-            <img
-              src="{{ url_for('static', filename='images/Basketball.jpg') }}"
-              class="poster"
-              alt="Movie 2"
-            />
-          </a>
-          <p>Movie 2</p>
-        </div>
-
-        <div class="icon">
-          <a href="{{ url_for('page3') }}">
-            <img
-              src="{{ url_for('static', filename='images/fivefeet.avif') }}"
-              alt="Movie 3"
-            />
-          </a>
-          <p>Movie 3</p>
-        </div>
-
-        <div class="icon">
-          <a href="{{ url_for('page4') }}">
-            <img
-              src="{{ url_for('static', filename='images/War.webp') }}"
-              alt="Movie 4"
-            />
-          </a>
-          <p>Movie 4</p>
-        </div>
-
-        <div class="icon">
-          <a href="{{ url_for('page5') }}">
-            <img
-              src="{{ url_for('static', filename='images/Interstellar.webp') }}"
-              alt="Movie 5"
-            />
-          </a>
-          <p>Movie 5</p>
-        </div>
-      </div>
-    </header>
 
     <main></main>
 
