@@ -1,39 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title> page 3 </title>
-</head>
-<body> 
-<header class="top-header">
-    <a href="index.html" class="back-button">← Back</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Page 2</title>
+  </head>
 
-    <nav class="top-nav">
+  <body>
+    <header class="top-header">
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
+
+      <nav class="top-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#movies">Movies</a></li>
-            <li><a href="index.html#books">Books</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}#movies">Movies</a></li>
+          <li><a href="{{ url_for('index') }}#books">Books</a></li>
         </ul>
 
-        <input type="text" placeholder="Search..." class="search-bar">
-    </nav>
-</header>
+        <input type="text" placeholder="Search..." class="search-bar" />
+      </nav>
+    </header>
 
-    <main class="movie-layout">
-    <img src="basketball-diaries-0-2000-0-3000-crop.jpg" class="poster">
+    <main class="bd-layout">
+      <div class="bd-top-row">
+        <div class="bd-poster-box">
+          <img
+            src="{{ url_for('static', filename='images/fivefeet.avif') }}"
+            class="bd-poster"
+            alt="Five Feet Apart Poster"
+          />
+        </div>
 
-    <div class="movie-info">
-        <h2>The Basketball Diaries</h2>
-        <p>⭐⭐⭐⭐☆</p>
-        <p>Your description goes here...</p>
-    </div>
-</main>
-    <footer> 
+        <div class="bd-details">
+          <p><strong>Duration:</strong> 1h 56m</p>
+          <p><strong>Genre:</strong> Romance / Drama</p>
+          <p><strong>Released:</strong> 2019</p>
+          <p><strong>Cast:</strong> Cole Sprouse, Haley Lu Richardson</p>
+        </div>
+      </div>
 
-        <p>© 2025 Anas Ali Almahdawi | All Rights Reserved</p> 
-    </footer> 
+      <div class="bd-review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p class="review-title">My personal Review:</p>
+        <p class="review-text">
+          Five feet apart is a movie that will most likely make you cry. It's a
+          movie about two people who have a condition called CP that doesn't
+          allow them to touch each other. If they do touch they will likely die.
+          Watching them fall in love is heartbreaking because we know its love
+          that can't last. This movie is a beautiful presentation of love. The
+          ending of this movie is a heart-breaking but necessary ending.
+        </p>
+      </div>
+    </main>
 
-</body>
+    <footer></footer>
+  </body>
 </html>

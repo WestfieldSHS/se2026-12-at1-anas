@@ -3,45 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
     <title>Page 1</title>
   </head>
+
   <body>
     <header class="top-header">
-      <a href="index.html" class="back-button">← Back</a>
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
 
       <nav class="top-nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#movies">Movies</a></li>
-          <li><a href="index.html#books">Books</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}#movies">Movies</a></li>
+          <li><a href="{{ url_for('index') }}#books">Books</a></li>
         </ul>
 
         <input type="text" placeholder="Search..." class="search-bar" />
       </nav>
     </header>
 
-    <main class="movie-layout">
-      <div class="top-row">
+    <main class="page1-layout">
+      <div class="page1-top-row">
         <div class="poster-box">
           <img
-            src="{{ url_for('static', filename='images/little TC.webp') }}"
+            src="{{ url_for('static', filename='images/little-TC.webp') }}"
             class="poster"
+            alt="Little Women Poster"
           />
           <h2 class="poster-title">Little Women</h2>
         </div>
 
-        <div class="movie-details">
+        <div class="page1-details">
           <p><strong>Duration:</strong> 2h 15m</p>
           <p><strong>Genre:</strong> Drama / Romance</p>
           <p><strong>Released:</strong> 2019</p>
-          <p>
-            <strong>Cast:</strong> Saoirse Ronan, Timothée Chalamet, Emma Watson
-          </p>
+          <p><strong>Cast:</strong> Saoirse Ronan</p>
         </div>
       </div>
 
-      <div class="movie-review">
+      <div class="page1-review">
         <p>⭐⭐⭐⭐⭐</p>
         <p class="review-title">My personal Review:</p>
         <p class="review-text">
@@ -51,7 +54,7 @@
           was confessing everything he felt to Jo. His acting made me feel
           everything as if I was standing on the sidelines. This movie will go
           down as one of my favorite romance movies of all time. Jo is the most
-          idiotic person for not choosing Laurie....
+          idiotic person for not choosing Laurie.
         </p>
       </div>
     </main>

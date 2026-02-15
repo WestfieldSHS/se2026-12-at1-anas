@@ -1,40 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
     <title>Page 2</title>
-</head>
-<body> 
-<header class="top-header">
-    <a href="index.html" class="back-button">← Back</a>
+  </head>
 
-    <nav class="top-nav">
+  <body>
+    <header class="top-header">
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
+
+      <nav class="top-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#movies">Movies</a></li>
-            <li><a href="index.html#books">Books</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}#movies">Movies</a></li>
+          <li><a href="{{ url_for('index') }}#books">Books</a></li>
         </ul>
 
-        <input type="text" placeholder="Search..." class="search-bar">
-    </nav>
-</header>
+        <input type="text" placeholder="Search..." class="search-bar" />
+      </nav>
+    </header>
 
-</header>
-<main class="movie-layout">
-<img src="basketball-diaries-0-2000-0-3000-crop.jpg" class="poster">
+    <main class="bd-layout">
+      <div class="bd-top-row">
+        <div class="bd-poster-box">
+          <img
+            src="{{ url_for('static', filename='images/Basketball.jpg') }}"
+            class="bd-poster"
+            alt="Basketball Diaries Poster"
+          />
+          <h2 class="poster-title">Basketball Diaries</h2>
+        </div>
 
-    <div class="movie-info">
-        <h2>The Basketball Diaries</h2>
-        <p>⭐⭐⭐⭐☆</p>
-        <p>Your description goes here...</p>
-    </div>
-</main>
-    <footer>
+        <div class="bd-details">
+          <p><strong>Duration:</strong> 1h 42m</p>
+          <p><strong>Genre:</strong> Biography / Crime / Drama</p>
+          <p><strong>Released:</strong> 1995</p>
+          <p><strong>Cast:</strong> Leonardo DiCaprio</p>
+        </div>
+      </div>
 
+      <div class="bd-review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p class="review-title">My personal Review:</p>
+        <p class="review-text">
+          Leonardo DiCaprio. That is the reason this movie was so beautifully
+          portrayed. The acting of Leonardo was so spectacular. This movie is
+          about a boy who is consumed by the harms of drugs. It shows that drugs
+          will strip you of everything you hold dear. Relationships, education,
+          sport. These are all things he lost because of stupid curiosity. The
+          Basketball Diaries will personally go down as my favorite addiction
+          movie.
+        </p>
+      </div>
+    </main>
 
-    </footer>
-
-</body>
+    <footer></footer>
+  </body>
 </html>

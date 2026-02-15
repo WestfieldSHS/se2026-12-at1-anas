@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
-    <title>Movie Menu</title>
+    <title>Movie vo Menu</title>
   </head>
 
   <body>
@@ -22,58 +22,61 @@
         <input type="text" placeholder="Search..." class="search-bar" />
       </nav>
 
-<div class="icon">
-  <a href="{{ url_for('page4') }}">
-    <img
-      src="{{ url_for('static', filename='images/movie4-icon.jpg') }}"
-      alt="Movie 4"
-    />
-  </a>
-  <p>Movie 4</p>
-</div>
-
+      <div class="movie-icons">
+        <div class="icon">
+          <a href="{{ url_for('page1') }}">
+            <img
+              src="{{ url_for('static', filename='images/little-TC.webp') }}"
+              alt="Movie 1"
+            />
+          </a>
+          <p>Movie 1</p>
+        </div>
 
         <div class="icon">
-          <a href="{{ url_for('page2') }}"
-            ><img
-              src="{{ url_for('static', filename='images/movie2-icon.jpg') }}"
+          <a href="{{ url_for('page2') }}">
+            <img
+              src="{{ url_for('static', filename='images/Basketball.jpg') }}"
+              class="poster"
               alt="Movie 2"
-          /></a>
+            />
+          </a>
           <p>Movie 2</p>
         </div>
 
         <div class="icon">
-          <a href="{{ url_for('page3') }}"
-            ><img
-              src="{{ url_for('static', filename='images/movie3-icon.jpg') }}"
+          <a href="{{ url_for('page3') }}">
+            <img
+              src="{{ url_for('static', filename='images/fivefeet.avif') }}"
               alt="Movie 3"
-          /></a>
+            />
+          </a>
           <p>Movie 3</p>
         </div>
 
         <div class="icon">
-          <a href="{{ url_for('page4') }}"
-            ><img
-              rc="{{ url_for('static', filename='images/movie4-icon.jpg') }}"
+          <a href="{{ url_for('page4') }}">
+            <img
+              src="{{ url_for('static', filename='images/War.webp') }}"
               alt="Movie 4"
-          /></a>
+            />
+          </a>
           <p>Movie 4</p>
         </div>
 
         <div class="icon">
-          <a href="{{ url_for('page5') }}"
-            ><img
-              src="{{ url_for('static', filename='images/movie5-icon.jpg') }}"
+          <a href="{{ url_for('page5') }}">
+            <img
+              src="{{ url_for('static', filename='images/Interstellar.webp') }}"
               alt="Movie 5"
-          /></a>
+            />
+          </a>
           <p>Movie 5</p>
         </div>
       </div>
     </header>
 
-    <main>
-      <h2>Select a movie above</h2>
-    </main>
+    <main></main>
 
     <footer></footer>
   </body>

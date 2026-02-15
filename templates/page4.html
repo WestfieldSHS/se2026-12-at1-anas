@@ -1,39 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Page 4</title>
-</head>
-<body> 
-<header class="top-header">
-    <a href="index.html" class="back-button">← Back</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <title>Page 2</title>
+  </head>
 
-    <nav class="top-nav">
+  <body>
+    <header class="top-header">
+      <a href="{{ url_for('index') }}" class="back-button">← Back</a>
+
+      <nav class="top-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#movies">Movies</a></li>
-            <li><a href="index.html#books">Books</a></li>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('index') }}#movies">Movies</a></li>
+          <li><a href="{{ url_for('index') }}#books">Books</a></li>
         </ul>
 
-        <input type="text" placeholder="Search..." class="search-bar">
-    </nav>
-</header>
+        <input type="text" placeholder="Search..." class="search-bar" />
+      </nav>
+    </header>
 
-    <main class="movie-layout">
-    <img src="basketball-diaries-0-2000-0-3000-crop.jpg" class="poster">
+    <main class="bd-layout">
+      <div class="bd-top-row">
+        <div class="bd-poster-box">
+          <img
+            src="{{ url_for('static', filename='images/War.webp') }}"
+            class="bd-poster"
+            alt="War for the Planet of the Apes Poster"
+          />
+        </div>
 
-    <div class="movie-info">
-        <h2>The Basketball Diaries</h2>
-        <p>⭐⭐⭐⭐☆</p>
-        <p>Your description goes here...</p>
-    </div>
-</main>
-    <footer>
+        <div class="bd-details">
+          <p><strong>Duration:</strong> 2h 20m</p>
+          <p><strong>Genre:</strong> Action / Drama / Sci‑Fi</p>
+          <p><strong>Released:</strong> 2017</p>
+          <p><strong>Cast:</strong> Andy Serkis, Woody Harrelson</p>
+        </div>
+      </div>
 
+      <div class="bd-review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <p class="review-title">My personal Review:</p>
+        <p class="review-text">
+          The greatest end to a trilogy, even possibly better than the ending to
+          The Lord of the Rings. The emotions that were conveyed were
+          phenomenally displayed. This movie really showed the impact of
+          discrimination that the apes had to deal with. Wholeheartedly, I
+          believe that any creature with the ability to present emotions must be
+          treated with the same values as humans. Deserves a 5 because of how
+          intense I felt through the movie.
+        </p>
+      </div>
+    </main>
 
-    </footer>
-
-</body>
+    <footer></footer>
+  </body>
 </html>
