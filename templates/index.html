@@ -21,12 +21,34 @@
         </ul>
 
         <form action="{{ url_for('search') }}" method="get">
-          <input type="text" name="q" placeholder="Search..." class="search-bar" />
+          <input
+            type="text"
+            name="q"
+            placeholder="Search..."
+            class="search-bar"
+          />
         </form>
       </nav>
+    </header>
 
-    <main></main>
+    <main class="home-icons">
+      <a href="{{ url_for('movies') }}" class="icon-card">
+        <div class="icon-circle">🎬</div>
+        <p>Movies</p>
+        <span class="icon-desc">Reviews of the films that stayed with me.</span>
+      </a>
 
-    <footer></footer>
+      <a href="{{ url_for('shows') }}" class="icon-card">
+        <div class="icon-circle">📺</div>
+        <p>Shows</p>
+        <span class="icon-desc">Series that pulled me into their worlds.</span>
+      </a>
+
+      <a href="{{ url_for('games') }}" class="icon-card">
+        <div class="icon-circle">🎮</div>
+        <p>Games</p>
+        <span class="icon-desc">Stories and adventures that left a mark.</span>
+      </a>
+    </main>
   </body>
 </html>

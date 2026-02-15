@@ -1,4 +1,3 @@
-/* GLOBAL SETTINGS */
 html {
   scroll-behavior: smooth;
 }
@@ -34,7 +33,6 @@ p {
   margin: 10px;
 }
 
-/* NAV + ICONS */
 .movie-icons {
   margin-top: 40px;
   display: flex;
@@ -67,7 +65,6 @@ p {
   font-size: 16px;
 }
 
-/* POSTER (DEFAULT FOR PAGE 1) */
 .poster {
   width: 350px;
   height: auto;
@@ -86,7 +83,6 @@ p {
   margin-top: 10px;
 }
 
-/* NAVIGATION BAR */
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -126,7 +122,6 @@ p {
   border: none;
 }
 
-/* PAGE 1 — LITTLE WOMEN LAYOUT */
 .page1-layout {
   display: flex;
   flex-direction: column;
@@ -187,7 +182,6 @@ p {
   color: #f5f5f5;
 }
 
-/* PAGE 2 — BASKETBALL DIARIES LAYOUT */
 .page2-layout {
   display: flex;
   gap: 20px;
@@ -230,7 +224,6 @@ p {
   height: auto;
 }
 
-/* BASKETBALL DIARIES PAGE */
 .bd-layout {
   display: flex;
   flex-direction: column;
@@ -299,7 +292,6 @@ p {
   color: #f5f5f5;
 }
 
-/* ⭐ MOVIES + SHOWS GRID LAYOUT (NEW) ⭐ */
 .icon-grid {
   display: flex;
   justify-content: center;
@@ -331,4 +323,89 @@ p {
   margin-top: 10px;
   font-size: 18px;
   font-weight: 600;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.home-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 50px 0;
+  flex-direction: row;
+}
+
+.icon-card {
+  width: 180px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+}
+
+.icon-card img,
+.icon-circle {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.icon-card img:hover,
+.icon-circle:hover {
+  transform: scale(1.08);
+}
+
+.icon-card p {
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+
+.icon-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.icon-circle {
+  width: 180px;
+  height: 180px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  margin: 0 auto 10px auto;
 }
